@@ -3,178 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahi IT Services | Complete Digital Solutions</title>
+    <title>Mahi IT & Cyber | Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .service-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .mobile-menu { transition: transform 0.3s ease-in-out; }
-        .hidden-menu { transform: translateX(100%); }
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
+        
+        .service-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
+        .service-card:active { transform: scale(0.95); } /* Mobile touch feedback */
+        
+        .active-tab { background-color: #a39416; color: white; border-color: #a39416; }
+        
+        /* Mobile Sidebar Animation */
+        #sidebar { transition: transform 0.3s ease-in-out; }
+        .sidebar-hidden { transform: translateX(100%); }
+        .sidebar-visible { transform: translateX(0); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900">
 
     <nav class="bg-[#a39416] text-white sticky top-0 z-[100] shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <div class="bg-white p-1 rounded">
-                    <i class="fas fa-desktop text-[#a39416]"></i>
-                </div>
-                <span class="text-xl font-bold tracking-tight">Mahi IT Services</span>
+                <i class="fas fa-bolt text-yellow-300 text-xl"></i>
+                <span class="text-xl font-extrabold tracking-tight uppercase">Mahi IT Services</span>
             </div>
 
-            <div class="hidden md:flex space-x-8 font-semibold">
-                <a href="#home" class="hover:text-yellow-200">Home</a>
-                <a href="#services" class="hover:text-yellow-200">Services</a>
-                <a href="#custom" class="hover:text-yellow-200">Custom Request</a>
-                <a href="tel:+919773383276" class="bg-green-600 px-4 py-1 rounded-full hover:bg-green-700 transition">Call Us</a>
+            <div class="hidden md:flex items-center space-x-6 font-semibold">
+                <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services" target="_blank" class="bg-green-600 px-4 py-2 rounded-lg text-sm flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
             </div>
 
-            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-
-        <div id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-[#a39416] shadow-2xl z-[101] mobile-menu hidden-menu md:hidden">
-            <div class="p-6">
-                <button onclick="toggleMobileMenu()" class="text-2xl mb-8"><i class="fas fa-times"></i></button>
-                <div class="flex flex-col space-y-6 text-lg font-bold">
-                    <a href="#home" onclick="toggleMobileMenu()">Home</a>
-                    <a href="#services" onclick="toggleMobileMenu()">Services</a>
-                    <a href="#custom" onclick="toggleMobileMenu()">Custom Request</a>
-                    <a href="tel:+919773383276" class="text-green-300">Call: +91 9773383276</a>
-                </div>
-            </div>
+            <button onclick="toggleSidebar(true)" class="md:hidden p-2"><i class="fas fa-bars text-2xl"></i></button>
         </div>
     </nav>
 
-    <section id="home" class="bg-gradient-to-b from-[#a39416] to-yellow-500 text-white py-16 px-4 text-center">
-        <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase">All Online Services</h1>
-        <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">Get your documents processed quickly by experts. Low prices, fast service.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#services" class="bg-white text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg">Browse Services</a>
-            <a href="https://wa.me/919773383276" class="bg-green-600 text-white font-bold py-3 px-8 rounded-full shadow-lg"><i class="fab fa-whatsapp mr-2"></i>Message Us</a>
+    <div id="overlay" onclick="toggleSidebar(false)" class="fixed inset-0 bg-black/50 z-[150] hidden opacity-0 transition-opacity"></div>
+    <div id="sidebar" class="fixed right-0 top-0 h-full w-64 bg-white z-[151] sidebar-hidden shadow-2xl p-6">
+        <div class="flex justify-between items-center mb-10">
+            <span class="font-bold text-[#a39416]">Menu</span>
+            <button onclick="toggleSidebar(false)" class="text-2xl"><i class="fas fa-times"></i></button>
         </div>
-    </section>
-
-    <main class="container mx-auto px-4 py-12" id="services">
-        <h2 class="text-3xl font-bold mb-10 text-center border-b-4 border-yellow-500 inline-block mx-auto">Our Most Popular Services</h2>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="serviceGrid">
-            </div>
-
-        <section id="custom" class="mt-20 bg-white rounded-3xl p-8 shadow-xl border-2 border-dashed border-yellow-500 max-w-4xl mx-auto">
-            <div class="text-center">
-                <i class="fas fa-tools text-5xl text-yellow-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Need Something Else?</h3>
-                <p class="text-gray-600 mb-6">If you can't find the service you need above, tell us what you're looking for!</p>
-                <div class="flex flex-col md:flex-row gap-4">
-                    <input type="text" id="customInput" placeholder="Enter service name (e.g. Income Certificate, Gas Booking...)" 
-                           class="flex-1 border-2 border-gray-200 rounded-xl px-4 py-3 focus:border-yellow-500 outline-none">
-                    <button onclick="sendCustomRequest()" class="bg-yellow-500 text-white font-bold px-8 py-3 rounded-xl hover:bg-yellow-600 transition">
-                        Ask on WhatsApp
-                    </button>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="serviceModal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4">
-        <div class="absolute inset-0 bg-black opacity-60" onclick="closeModal()"></div>
-        <div class="bg-white rounded-2xl w-full max-w-md p-6 relative z-[201] shadow-2xl">
-            <h3 id="modalTitle" class="text-2xl font-bold text-gray-800 mb-4"></h3>
-            <div class="mb-6">
-                <h4 class="font-bold text-gray-500 text-sm uppercase mb-2">Documents Required:</h4>
-                <ul id="modalDocs" class="space-y-2 text-gray-700"></ul>
-            </div>
-            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6">
-                <p class="text-sm"><strong>Service Fee:</strong> <span id="modalPrice"></span></p>
-            </div>
-            <button id="whatsappBtn" class="w-full bg-green-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 hover:bg-green-700">
-                <i class="fab fa-whatsapp text-xl"></i> Start Application
-            </button>
+        <div class="flex flex-col space-y-6 font-bold text-lg">
+            <a href="tel:+919773383276" class="text-green-600"><i class="fas fa-phone mr-2"></i>Call Now</a>
         </div>
     </div>
 
-    <footer class="bg-gray-900 text-white pt-12 pb-6 mt-20">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold mb-4">Mahi IT Services</h2>
-            <p class="text-gray-400 mb-8 max-w-md mx-auto">Your one-stop destination for all government and digital applications.</p>
-            <div class="flex justify-center space-x-6 mb-8 text-2xl">
-                <a href="#" class="hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
-                <a href="https://wa.me/919773383276" class="hover:text-green-500"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:vikram.gupta205@gmail.com" class="hover:text-red-500"><i class="far fa-envelope"></i></a>
+    <header id="home" class="bg-[#a39416] pt-12 pb-24 px-4 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-3xl md:text-6xl font-extrabold text-white mb-4 uppercase">All Online Services</h1>
+            <p class="text-white/80 mb-8 max-w-xl mx-auto">Fast, reliable digital solutions for Government Forms & IT Hardware/Software needs.</p>
+            <div class="flex justify-center gap-3">
+                  <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services" class="bg-slate-900 text-white px-6 py-3 rounded-xl font-bold shadow-lg">WhatsApp Now</a>
             </div>
-            <p class="text-sm text-gray-500">&copy; 2026 Mahi IT Services | Managed by Vikram Gupta</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 -mt-12">
+        <div class="bg-white rounded-2xl shadow-xl p-4 md:p-6 mb-10">
+            <div class="flex flex-col gap-4">
+                <div class="relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="searchInput" onkeyup="render()" placeholder="Search (e.g. PAN, Laptop)..." 
+                           class="w-full pl-12 pr-4 py-3 bg-slate-50 rounded-xl border border-slate-100 focus:border-[#a39416] outline-none">
+                </div>
+            </div>
+        </div>
+
+        <div id="grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            </div>
+
+        <div class="my-16 bg-white border-2 border-dashed border-[#a39416] rounded-3xl p-8 text-center">
+            <h3 class="text-xl font-bold mb-2">Other Service Needed?</h3>
+            <p class="text-slate-500 mb-6 text-sm">Type your requirement below and we will help you on WhatsApp.</p>
+            <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                <input type="text" id="customInput" placeholder="Enter service name..." class="flex-1 px-4 py-3 rounded-xl bg-slate-50 border border-slate-100">
+                <button onclick="sendCustom()" class="bg-[#a39416] text-white px-6 py-3 rounded-xl font-bold">Ask Now</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="fixed inset-0 z-[200] hidden items-end sm:items-center justify-center p-0 sm:p-4">
+        <div onclick="closeModal()" class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+        <div class="bg-white w-full sm:max-w-md rounded-t-[2rem] sm:rounded-[2rem] p-8 relative z-[201] animate-in slide-in-from-bottom sm:zoom-in duration-300">
+            <div id="mCat" class="text-[10px] font-bold uppercase tracking-widest text-[#a39416] mb-2"></div>
+            <h2 id="mTitle" class="text-2xl font-extrabold mb-1"></h2>
+            <p id="mPrice" class="font-bold text-green-600 mb-6"></p>
+            
+            <div class="mb-8">
+                <h4 class="text-xs font-bold text-slate-400 uppercase mb-3">Requirements:</h4>
+                <ul id="mDocs" class="space-y-2 text-slate-600 text-sm"></ul>
+            </div>
+
+            <button id="mBtn" class="w-full bg-green-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2">
+                <i class="fab fa-whatsapp text-xl"></i> Send on WhatsApp
+            </button>
+            <button onclick="closeModal()" class="w-full mt-2 text-slate-400 py-2 text-sm">Close</button>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-white py-12 px-4 text-center">
+        <p class="font-bold">Mahi IT Services | Vikram Gupta</p>
+        <p class="text-slate-500 text-sm mt-2">Available 10 AM - 8 PM</p>
+        <div class="mt-6 flex justify-center gap-6 text-xl">
+            <a href="tel:+919773383276"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
 
     <script>
-        // Updated service list including Ration, PVC, and Certificates
-        const services = [
-    { name: "New PAN Card", icon: "fa-id-card", color: "bg-red-500", price: "₹200", docs: ["Aadhaar Card", "2 Photos", "Mobile Number"] },
-    { name: "Passport Service", icon: "fa-passport", color: "bg-blue-600", price: "₹1600+", docs: ["Aadhaar Card", "10th Marksheet", "Address Proof"] },
-    { name: "Ration Card", icon: "fa-shopping-basket", color: "bg-green-600", price: "₹300", docs: ["Family Aadhaar", "Income Proof", "Gas Book"] },
-    { name: "Gazette (Name Change)", icon: "fa-file-signature", color: "bg-orange-600", price: "₹1200+", docs: ["ID Proof", "Affidavit", "Newspaper Ad"] },
-    { name: "Income Certificate", icon: "fa-coins", color: "bg-yellow-600", price: "₹250", docs: ["Aadhaar", "Ration Card", "Income Proof"] },
-    { name: "Vehicle Insurance", icon: "fa-shield-alt", color: "bg-purple-600", price: "As per Premium", docs: ["RC Book", "Old Policy"] },
-    { name: "Voter ID", icon: "fa-user-check", color: "bg-teal-500", price: "₹200", docs: ["Aadhaar", "Photo", "Age Proof"] },
-    { name: "PVC Card Printing", icon: "fa-print", color: "bg-gray-700", price: "₹200", docs: ["PDF File of Card"] },
-    { name: "PF / UAN Help", icon: "fa-university", color: "bg-indigo-700", price: "₹200+", docs: ["UAN Number", "Aadhaar Linked Mobile"] },
-    { name: "Driving License", icon: "fa-id-badge", color: "bg-blue-400", price: "₹500+", docs: ["Aadhaar", "Blood Group", "Learning License"] },
-    { name: "Shop Act / Gumasta", icon: "fa-store", color: "bg-pink-600", price: "₹800", docs: ["Aadhaar", "Shop Photo", "Light Bill"] },
-    { name: "Police Clearance", icon: "fa-user-shield", color: "bg-red-700", price: "₹300", docs: ["Aadhaar", "Address Proof", "Photo"] }
+       const services = [
+    // --- CYBER CAFE / GOVERNMENT SERVICES ---
+    { cat: 'cyber', name: "New PAN Card", icon: "fa-address-card", color: "bg-red-500", price: "₹250", docs: ["Aadhaar Card", "2 Passport Photos", "Mobile Number"] },
+    { cat: 'cyber', name: "PAN Card Correction", icon: "fa-edit", color: "bg-red-600", price: "₹350", docs: ["Old PAN Card", "Aadhaar Card", "Proof of Correction"] },
+    { cat: 'cyber', name: "Ration Card (New/Add)", icon: "fa-shopping-basket", color: "bg-emerald-600", price: "₹300+", docs: ["Family Aadhaar", "Income Proof", "Gas connection", "Old Ration Card"] },
+    { cat: 'cyber', name: "Passport (Fresh/Renew)", icon: "fa-passport", color: "bg-blue-600", price: "₹1600+", docs: ["Aadhaar Card", "10th Marksheet", "Electricity/Voter Bill"] },
+    { cat: 'cyber', name: "Gazette (Name Change)", icon: "fa-file-alt", color: "bg-orange-500", price: "₹1500+", docs: ["ID Proof", "Affidavit", "Newspaper Advertisement"] },
+    { cat: 'cyber', name: "Voter ID Registration", icon: "fa-id-badge", color: "bg-teal-500", price: "₹200", docs: ["Aadhaar Card", "1 Passport Photo", "Age Proof (Birth/LC)"] },
+    { cat: 'cyber', name: "Income Certificate", icon: "fa-wallet", color: "bg-yellow-600", price: "₹250", docs: ["Aadhaar", "Ration Card", "Last 3 years IT returns/Salary Slip"] },
+    { cat: 'cyber', name: "Caste Certificate", icon: "fa-users", color: "bg-purple-500", price: "₹300", docs: ["Aadhaar", "Father's Caste Proof", "School LC"] },
+    { cat: 'cyber', name: "Domicile Certificate", icon: "fa-home", color: "bg-indigo-500", price: "₹250", docs: ["Aadhaar Card", "10-15 Years Residence Proof", "Voter ID"] },
+    { cat: 'cyber', name: "PF / UAN Withdrawal", icon: "fa-university", color: "bg-blue-800", price: "₹500+", docs: ["UAN Number", "Bank Passbook", "Aadhaar Linked Mobile"] },
+    { cat: 'cyber', name: "Driving License (LL)", icon: "fa-car", color: "bg-slate-600", price: "₹500+", docs: ["Aadhaar Card", "Blood Group Report", "Mobile Number"] },
+    { cat: 'cyber', name: "Police Clearance (PCC)", icon: "fa-user-shield", color: "bg-red-700", price: "₹300", docs: ["Aadhaar Card", "Passport Copy", "Address Proof"] },
+    { cat: 'cyber', name: "Shop Act / Gumasta", icon: "fa-store", color: "bg-pink-600", price: "₹800+", docs: ["Aadhaar", "Shop Board Photo", "Light Bill", "Rent Agreement"] },
+    { cat: 'cyber', name: "Ayushman Bharat Card", icon: "fa-heartbeat", color: "bg-green-500", price: "₹150", docs: ["Aadhaar Card", "Ration Card", "Mobile Number"] },
+    { cat: 'cyber', name: "PVC Card Printing", icon: "fa-print", color: "bg-gray-700", price: "₹150", docs: ["Digital PDF File of any ID Card"] },
+
+    // --- IT & PROFESSIONAL TECH SERVICES ---
+    { cat: 'it', name: "Laptop/PC Repair", icon: "fa-laptop-code", color: "bg-indigo-600", price: "Visit: ₹500+", docs: ["Hardware Repair", "Motherboard Service", "Laptop Screen Change"] },
+    { cat: 'it', name: "Windows OS Install", icon: "fa-desktop", color: "bg-blue-400", price: "₹500+", docs: ["Windows 10/11 Setup", "Drivers Update", "MS Office Install"] },
+    { cat: 'it', name: "Web Development", icon: "fa-code", color: "bg-sky-500", price: "Starts ₹5000+", docs: ["Business Website", "E-commerce", "Portfolio", "SEO Setup"] },
+    { cat: 'it', name: "SSD / RAM Upgrade", icon: "fa-microchip", color: "bg-green-700", price: "Part Cost + ₹300", docs: ["Laptop Speed Up", "SSD Migration", "Performance Boost"] },
+    { cat: 'it', name: "CCTV Installation", icon: "fa-video", color: "bg-slate-700", price: "On Visit", docs: ["Home/Office Security", "Mobile Monitoring Setup", "Wireless Cameras"] },
+    { cat: 'it', name: "Graphic Design", icon: "fa-bezier-curve", color: "bg-pink-500", price: "Starts ₹500+", docs: ["Logo Design", "Visiting Cards", "Social Media Posters"] },
+    { cat: 'it', name: "Software / Antivirus", icon: "fa-shield-alt", color: "bg-red-500", price: "MRP Based", docs: ["QuickHeal/K7/McAfee", "Tally ERP", "Photoshop Install"] },
+    { cat: 'it', name: "Data Recovery", icon: "fa-database", color: "bg-rose-700", price: "On Diagnosis", docs: ["Formatted HDD Recovery", "Deleted Files", "Pendrive Fix"] },
+    { cat: 'it', name: "Networking Setup", icon: "fa-network-wired", color: "bg-cyan-600", price: "Quote on Visit", docs: ["Wi-Fi Router Config", "LAN Wiring", "Range Extenders"] }
 ];
 
-        const grid = document.getElementById('serviceGrid');
+        let filter = 'all';
 
-        services.forEach(s => {
-            const el = document.createElement('div');
-            el.className = "service-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center cursor-pointer";
-            el.innerHTML = `
-                <div class="${s.color} w-16 h-16 rounded-2xl flex items-center justify-center text-white text-3xl mb-4 shadow-md">
-                    <i class="fas ${s.icon}"></i>
-                </div>
-                <h3 class="font-bold text-xl text-center mb-4">${s.name}</h3>
-                <button class="w-full py-2 border-2 border-yellow-500 text-yellow-600 font-bold rounded-lg hover:bg-yellow-500 hover:text-white transition">View Details</button>
-            `;
-            el.onclick = () => openModal(s);
-            grid.appendChild(el);
-        });
+        function render() {
+            const grid = document.getElementById('grid');
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            grid.innerHTML = '';
+
+            services.filter(s => (filter === 'all' || s.cat === filter) && s.name.toLowerCase().includes(search))
+            .forEach(s => {
+                const card = document.createElement('div');
+                card.className = "service-card bg-white p-6 rounded-2xl shadow-sm hover:shadow-md cursor-pointer flex flex-col items-center text-center";
+                card.innerHTML = `
+                    <div class="${s.color} w-14 h-14 rounded-xl flex items-center justify-center text-white text-2xl mb-4">
+                        <i class="fas ${s.icon}"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-800 text-sm mb-4 leading-tight">${s.name}</h3>
+                    <span class="mt-auto text-[10px] bg-slate-100 px-3 py-1 rounded-full font-bold text-slate-400 uppercase">${s.cat}</span>
+                `;
+                card.onclick = () => openModal(s);
+                grid.appendChild(card);
+            });
+        }
 
         function openModal(s) {
-            document.getElementById('modalTitle').innerText = s.name;
-            document.getElementById('modalPrice').innerText = s.price;
-            const docList = document.getElementById('modalDocs');
-            docList.innerHTML = s.docs.map(d => `<li class="flex items-center gap-2"><i class="fas fa-check-circle text-green-500 text-xs"></i> ${d}</li>`).join('');
+            document.getElementById('mTitle').innerText = s.name;
+            document.getElementById('mPrice').innerText = `Estimated: ${s.price}`;
+            document.getElementById('mCat').innerText = s.cat === 'it' ? 'Professional IT' : 'Cyber Cafe';
+            document.getElementById('mDocs').innerHTML = s.docs.map(d => `<li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> ${d}</li>`).join('');
             
-            const msg = encodeURIComponent(`Hello, I want to inquire about ${s.name}. I have the following documents: ${s.docs.join(', ')}.`);
-            document.getElementById('whatsappBtn').onclick = () => {
-                window.location.href = `https://wa.me/919773383276?text=${msg}`;
-            };
+            const msg = encodeURIComponent(`Hi Vikram, I need help with ${s.name}. Please let me know the process.`);
+            document.getElementById('mBtn').onclick = () => window.location.href = `https://wa.me/919773383276?text=${msg}`;
             
-            document.getElementById('serviceModal').classList.remove('hidden');
-            document.getElementById('serviceModal').classList.add('flex');
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            document.getElementById('serviceModal').classList.add('hidden');
-            document.getElementById('serviceModal').classList.remove('flex');
+            document.getElementById('modal').classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
 
-        function toggleMobileMenu() {
-            document.getElementById('sidebar').classList.toggle('hidden-menu');
+        function setFilter(f) {
+            filter = f;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-tab', 'bg-slate-100'));
+            document.getElementById(`f-${f}`).classList.add('active-tab');
+            render();
         }
 
-        function sendCustomRequest() {
-            const input = document.getElementById('customInput').value;
-            if(!input) return alert("Please type a service name!");
-            const msg = encodeURIComponent(`Hi Vikram, I am looking for a custom service: ${input}. Can you help me with the documents and price?`);
-            window.location.href = `https://wa.me/919773383276?text=${msg}`;
+        function toggleSidebar(show) {
+            const s = document.getElementById('sidebar');
+            const o = document.getElementById('overlay');
+            if(show) {
+                s.classList.replace('sidebar-hidden', 'sidebar-visible');
+                o.classList.remove('hidden');
+                setTimeout(() => o.classList.add('opacity-100'), 10);
+            } else {
+                s.classList.replace('sidebar-visible', 'sidebar-hidden');
+                o.classList.remove('opacity-100');
+                setTimeout(() => o.classList.add('hidden'), 300);
+            }
         }
+
+        function sendCustom() {
+            const val = document.getElementById('customInput').value;
+            if(!val) return;
+            window.location.href = `https://wa.me/919773383276?text=${encodeURIComponent("Inquiry: " + val)}`;
+        }
+
+        render();
     </script>
 </body>
 </html>
