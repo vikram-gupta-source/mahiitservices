@@ -1,9 +1,0 @@
-# Netlify _redirects rules
-# Redirect .html to clean URL
-/:splat.html    /:splat    301!
-
-# Serve directory index for clean URLs
-/:splat    /:splat/index.html    200
-
-# Fallback: try serving .html for other paths (may or may not be required)
-/*    /:splat.html    200
