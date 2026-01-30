@@ -2,36 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahi IT & Cyber | Official</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO TITLE -->
+    <title>Mahi IT & Cyber Services | Online Government & IT Solutions</title>
+
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="Mahi IT & Cyber Services provides online government services, PAN card, passport, certificates, laptop repair, web development, CCTV installation and complete IT solutions in India.">
+
+    <!-- KEYWORDS (optional but useful for local SEO) -->
+    <meta name="keywords" content="IT services, cyber cafe services, PAN card, passport services, laptop repair, web development, CCTV installation, online government services">
+
+    <!-- AUTHOR -->
+    <meta name="author" content="Mahi IT & Cyber Services">
+
+    <!-- OPEN GRAPH (SOCIAL SHARING) -->
+    <meta property="og:title" content="Mahi IT & Cyber Services – Online IT & Government Services">
+    <meta property="og:description" content="Fast and reliable cyber cafe and IT services including PAN card, passport, certificates, laptop repair, CCTV and web development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mahiitservices.in/">
+    <meta property="og:image" content="https://mahiitservices.in/og-image.jpg">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mahi IT & Cyber Services – Online IT & Government Services">
+    <meta name="twitter:image" content="https://mahiitservices.in/og-image.jpg">
+    <meta property="og:image:alt" content="Mahi IT & Cyber Services - Services Preview">
+    <meta name="twitter:site" content="@mahiitservices">
+    <meta property="og:site_name" content="Mahi IT & Cyber Services">
+    <link rel="canonical" href="https://mahiitservices.in/">
+    <meta name="robots" content="index, follow">
+    <!-- Google Analytics (replace G-XXXXXXX with your Measurement ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX', { 'anonymize_ip': true });
+    </script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="theme-color" content="#a39416">
+
+    <!-- PRECONNECT FOR PERFORMANCE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- SIDEBAR SLIDE STYLES (fixes close/open reliability) -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
-        
-        .service-card { transition: all 0.3s ease; border: 1px solid #f1f5f9; }
-        .service-card:active { transform: scale(0.95); } /* Mobile touch feedback */
-        
-        .active-tab { background-color: #a39416; color: white; border-color: #a39416; }
-        
-        /* Mobile Sidebar Animation */
-        #sidebar { transition: transform 0.3s ease-in-out; }
-        .sidebar-hidden { transform: translateX(100%); }
-        .sidebar-visible { transform: translateX(0); }
+      /* Smooth slide for sidebar and pointer control */
+      #sidebar { transition: transform 300ms ease, visibility 300ms; }
+      .sidebar-hidden { transform: translateX(110%); visibility: hidden; pointer-events: none; }
+      .sidebar-visible { transform: translateX(0); visibility: visible; pointer-events: auto; }
+      /* Overlay transitions use tailwind's opacity utilities; ensure transition exists */
+      #overlay { transition: opacity 300ms ease; }
+      /* Larger clickable close button */
+      .close-btn { padding: 6px; border-radius: 8px; border: 2px solid rgba(0,0,0,0.06); background:#fff; }
     </style>
+
+    <!-- GOOGLE FONT (NON-BLOCKING, PRELOAD) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet"></noscript>
+
+    <!-- FONT AWESOME (NON-BLOCKING) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <!-- TAILWIND CDN (DEFERRED) -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <!-- STRUCTURED DATA (ORGANIZATION) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Mahi IT & Cyber Services",
+      "url": "https://mahiitservices.in",
+      "telephone": "+919773383276",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "serviceType": [
+        "Cyber Cafe Services",
+        "Government Online Services",
+        "IT Services",
+        "Laptop Repair",
+        "Web Development"
+      ]
+    }
+    </script>
 </head>
+
 <body class="bg-slate-50 text-slate-900">
 
     <nav class="bg-[#a39416] text-white sticky top-0 z-[100] shadow-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-bolt text-yellow-300 text-xl"></i>
-                <span class="text-xl font-extrabold tracking-tight uppercase">Mahi IT Services</span>
+                <a href="/" class="text-2xl md:text-3xl font-extrabold text-white no-underline">Mahi IT & Services</a>
+
             </div>
 
             <div class="hidden md:flex items-center space-x-6 font-semibold">
-                <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services" target="_blank" class="bg-green-600 px-4 py-2 rounded-lg text-sm flex items-center gap-2">
+                <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services" target="_blank" rel="noopener noreferrer" class="bg-green-600 px-4 py-2 rounded-lg text-sm flex items-center gap-2">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
@@ -44,7 +119,7 @@
     <div id="sidebar" class="fixed right-0 top-0 h-full w-64 bg-white z-[151] sidebar-hidden shadow-2xl p-6">
         <div class="flex justify-between items-center mb-10">
             <span class="font-bold text-[#a39416]">Menu</span>
-            <button onclick="toggleSidebar(false)" class="text-2xl"><i class="fas fa-times"></i></button>
+            <button onclick="toggleSidebar(false)" class="text-2xl close-btn" aria-label="Close menu"><i class="fas fa-times"></i></button>
         </div>
         <div class="flex flex-col space-y-6 font-bold text-lg">
             <a href="tel:+919773383276" class="text-green-600"><i class="fas fa-phone mr-2"></i>Call Now</a>
@@ -53,10 +128,10 @@
 
     <header id="home" class="bg-[#a39416] pt-12 pb-24 px-4 text-center">
         <div class="container mx-auto">
-            <h1 class="text-3xl md:text-6xl font-extrabold text-white mb-4 uppercase">All Online Services</h1>
+            <h1 class="text-3xl md:text-6xl font-extrabold text-white mb-4 uppercase">Mahi IT & Cyber Services — Online IT & Government Services in India</h1>
             <p class="text-white/80 mb-8 max-w-xl mx-auto">Fast, reliable digital solutions for Government Forms & IT Hardware/Software needs.</p>
             <div class="bg-[#a39416] text-white flex justify-center gap-3">
-                 <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services" target="_blank" class="bg-green-600 px-4 py-2 rounded-lg text-sm flex items-center gap-2">
+                 <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services" target="_blank" rel="noopener noreferrer" class="bg-green-600 px-4 py-2 rounded-lg text-sm flex items-center gap-2">
                     <i class="fab fa-whatsapp"></i> WhatsApp Now
                 </a>
             </div>
@@ -110,9 +185,28 @@
         <p class="font-bold">Mahi IT Services | Vikram Gupta</p>
         <p class="text-slate-500 text-sm mt-2">Available 10 AM - 8 PM</p>
         <div class="mt-6 flex justify-center gap-6 text-xl">
-            <a href="tel:+919773383276"><i class="fas fa-phone"></i></a>
-            <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+919773383276" aria-label="Call us"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/919773383276?text=I%20want%20to%20know%20about%20the%20services" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
+
+        <div class="mt-8 max-w-3xl mx-auto">
+            <h3 class="font-bold mb-3">Explore Services by Location</h3>
+            <ul class="flex flex-wrap justify-center gap-3 text-sm">
+                <li><a href="/all-online-services" class="text-slate-300 hover:text-white">All Online Services</a></li>
+                <li><a href="/online-services-ghatkopar" class="text-slate-300 hover:text-white">Online Services in Ghatkopar</a></li>
+                <li><a href="/online-services-mulund" class="text-slate-300 hover:text-white">Online Services in Mulund</a></li>
+                <li><a href="/online-services-thane" class="text-slate-300 hover:text-white">Online Services in Thane</a></li>
+                <li><a href="/online-services-kalyan" class="text-slate-300 hover:text-white">Online Services in Kalyan</a></li>
+                <li><a href="/online-services-kurla" class="text-slate-300 hover:text-white">Online Services in Kurla</a></li>
+                <li><a href="/online-services-powai" class="text-slate-300 hover:text-white">Online Services in Powai</a></li>
+                <li><a href="/online-services-vikhroli" class="text-slate-300 hover:text-white">Online Services in Vikhroli</a></li>
+                <li><a href="/online-services-bhandup" class="text-slate-300 hover:text-white">Online Services in Bhandup</a></li>
+                <li><a href="/online-services-dombivli" class="text-slate-300 hover:text-white">Online Services in Dombivli</a></li>
+                <li><a href="/online-services-navi-mumbai" class="text-slate-300 hover:text-white">Online Services in Navi Mumbai</a></li>
+                <li><a href="/online-services-mumbai" class="text-slate-300 hover:text-white">Online Services in Mumbai</a></li>
+            </ul>
+        </div>
+
     </footer>
 
     <script>
@@ -198,13 +292,17 @@
         function toggleSidebar(show) {
             const s = document.getElementById('sidebar');
             const o = document.getElementById('overlay');
-            if(show) {
-                s.classList.replace('sidebar-hidden', 'sidebar-visible');
+            if (show) {
+                s.classList.add('sidebar-visible');
+                s.classList.remove('sidebar-hidden');
                 o.classList.remove('hidden');
+                // small delay to trigger transition
                 setTimeout(() => o.classList.add('opacity-100'), 10);
             } else {
-                s.classList.replace('sidebar-visible', 'sidebar-hidden');
+                s.classList.add('sidebar-hidden');
+                s.classList.remove('sidebar-visible');
                 o.classList.remove('opacity-100');
+                // hide overlay after fade-out completes
                 setTimeout(() => o.classList.add('hidden'), 300);
             }
         }
