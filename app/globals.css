@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+#sidebar {
+  transition: transform 300ms ease, visibility 300ms;
+}
+
+.sidebar-hidden {
+  transform: translateX(110%);
+  visibility: hidden;
+}
+
+.sidebar-visible {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 26, 77, 0.15);
+}
+
+.btn-premium {
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
