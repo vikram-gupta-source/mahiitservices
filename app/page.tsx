@@ -446,15 +446,21 @@ export default function Home() {
             <div>
               <h4 className="font-bold text-lg mb-6">{t.locationsTitle}</h4>
               <div className="flex flex-wrap gap-2 text-sm text-blue-100">
-                {['Ghatkopar', 'Mulund', 'Thane', 'Govandi', 'Kurla', 'Powai', 'Navi Mumbai'].map((location) => (
+                {[
+                  { name: 'Ghatkopar', path: 'online-services-ghatkopar' },
+                  { name: 'Mulund', path: 'online-services-mulund' },
+                  { name: 'Thane', path: 'online-services-thane' },
+                  { name: 'Govandi', path: 'online-services-dombivli' },
+                  { name: 'Kurla', path: 'online-services-kurla' },
+                  { name: 'Powai', path: 'online-services-powai' },
+                  { name: 'Navi Mumbai', path: 'online-services-navi-mumbai' }
+                ].map((location) => (
                   <a
-                    key={location}
-                    href={`https://maps.google.com/?q=${location},Mumbai`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    key={location.path}
+                    href={`/${location.path}`}
                     className="px-3 py-1.5 bg-white/10 rounded-full hover:bg-white/20 transition hover:text-white cursor-pointer"
                   >
-                    {location}
+                    {location.name}
                   </a>
                 ))}
               </div>
