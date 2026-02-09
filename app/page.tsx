@@ -157,7 +157,7 @@ export default function Home() {
       "icon": "fa-wallet",
       "color": "text-yellow-600",
       "bg": "bg-yellow-50",
-      "price": "₹250",
+      "price": "��250",
     },
     {
       "cat": "Government",
@@ -466,7 +466,7 @@ export default function Home() {
           </div>
 
           <div className="text-center pt-8 border-t border-white/10">
-            <p className="text-xs text-white/50 uppercase tracking-wider font-bold">&copy; 2026 Mahi IT Services. All Rights Reserved.</p>
+            <p className="text-xs text-white/50 uppercase tracking-wider font-bold">&copy; Mahi IT Services. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
