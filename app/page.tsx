@@ -240,7 +240,7 @@ export default function Home() {
   const t = translations[currentLanguage as keyof typeof translations];
 
   const handleWhatsApp = (serviceName?: string) => {
-    const text = serviceName 
+    const text = serviceName
       ? `Hi Vikram, I am interested in ${serviceName}`
       : 'Hi Vikram, I am interested in ';
     window.location.href = `https://wa.me/919773383276?text=${encodeURIComponent(text)}`;
@@ -260,9 +260,9 @@ export default function Home() {
       <nav className="bg-white text-[#001a4d] sticky top-0 z-[100] shadow-md border-b border-slate-200">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <img 
-              src="https://res.cloudinary.com/dg4wzx8c8/image/upload/v1770368880/app_images/qffsb4ibdrphjb6ir7jw.png" 
-              alt="Mahi IT Services" 
+            <img
+              src="https://res.cloudinary.com/dg4wzx8c8/image/upload/v1770368880/app_images/qffsb4ibdrphjb6ir7jw.png"
+              alt="Mahi IT Services"
               className="w-11 h-11 object-contain rounded-lg shadow-sm"
             />
             <div>
@@ -275,23 +275,21 @@ export default function Home() {
 
           <div className="hidden md:flex items-center space-x-6">
             <div className="flex items-center gap-3 bg-slate-100 rounded-full px-4 py-2">
-              <button 
+              <button
                 onClick={() => setCurrentLanguage('en')}
-                className={`text-xs font-bold px-3 py-1 rounded-full transition ${
-                  currentLanguage === 'en' 
-                    ? 'bg-white text-[#001a4d] shadow-sm' 
+                className={`text-xs font-bold px-3 py-1 rounded-full transition ${currentLanguage === 'en'
+                    ? 'bg-white text-[#001a4d] shadow-sm'
                     : 'text-slate-600'
-                }`}
+                  }`}
               >
                 EN
               </button>
-              <button 
+              <button
                 onClick={() => setCurrentLanguage('hi')}
-                className={`text-xs font-bold px-3 py-1 rounded-full transition ${
-                  currentLanguage === 'hi' 
-                    ? 'bg-white text-[#001a4d] shadow-sm' 
+                className={`text-xs font-bold px-3 py-1 rounded-full transition ${currentLanguage === 'hi'
+                    ? 'bg-white text-[#001a4d] shadow-sm'
                     : 'text-slate-600'
-                }`}
+                  }`}
               >
                 हिंदी
               </button>
@@ -299,7 +297,7 @@ export default function Home() {
             <a href="https://www.instagram.com/mahiitservices" target="_blank" rel="noopener noreferrer" className="text-pink-600 text-lg hover:scale-110 transition">
               <i className="fab fa-instagram"></i>
             </a>
-            <button 
+            <button
               onClick={() => handleWhatsApp()}
               className="bg-green-600 text-white px-5 py-2 rounded-full text-sm font-bold flex items-center gap-2 hover:bg-green-700 transition"
             >
@@ -325,13 +323,13 @@ export default function Home() {
             {t.heroDesc}
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-5">
-            <button 
+            <button
               onClick={() => handleWhatsApp()}
               className="bg-white text-[#001a4d] px-10 py-4 rounded-xl font-bold hover:bg-slate-100 transition shadow-2xl"
             >
               {t.inquireBtn}
             </button>
-            <a 
+            <a
               href="tel:+919773383276"
               className="bg-white/20 border-2 border-white text-white px-10 py-4 rounded-xl font-bold hover:bg-white/30 transition backdrop-blur-sm"
             >
@@ -390,13 +388,13 @@ export default function Home() {
           <h3 className="text-3xl font-bold mb-4">{t.customServiceTitle}</h3>
           <p className="text-blue-100 mb-10 max-w-2xl mx-auto text-lg">{t.customServiceDesc}</p>
           <form onSubmit={handleCustomInquiry} className="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
-            <input 
-              type="text" 
+            <input
+              type="text"
               name="customInput"
-              placeholder="Enter service name..." 
+              placeholder="Enter service name..."
               className="flex-1 px-6 py-4 rounded-xl bg-white text-slate-900 border-2 border-white shadow-lg focus:ring-2 focus:ring-[#f97316] outline-none placeholder-slate-500"
             />
-            <button 
+            <button
               type="submit"
               className="bg-white text-[#001a4d] px-8 py-4 rounded-xl font-bold hover:bg-slate-100 transition shadow-lg whitespace-nowrap"
             >
@@ -468,7 +466,7 @@ export default function Home() {
           </div>
 
           <div className="text-center pt-8 border-t border-white/10">
-            <p className="text-xs text-white/50 uppercase tracking-wider font-bold">&copy; 2024 Mahi IT Services. All Rights Reserved.</p>
+            <p className="text-xs text-white/50 uppercase tracking-wider font-bold">&copy; 2026 Mahi IT Services. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
