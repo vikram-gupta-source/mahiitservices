@@ -2,26 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>All Online Services | Mahi IT & Cyber Services</title>
-  <meta name="description" content="Browse all online IT & government services offered by Mahi IT & Cyber Services — PAN, passport, certificates, laptop repair, CCTV installation, web development and more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Online Services | Mahi IT and Cyber Services</title>
+  <meta name="description" content="Browse all online IT and government services from Mahi IT and Cyber Services including PAN, passport, certificates, laptop repair, CCTV and web development.">
   <link rel="canonical" href="https://mahiitservices.in/all-online-services">
   <meta name="robots" content="index, follow">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <meta property="og:title" content="All Online Services — Mahi IT & Cyber Services">
-  <meta property="og:description" content="PAN, passport, certificates, laptop repair, CCTV, web development — discover all services.">
+  <meta property="og:title" content="All Online Services | Mahi IT and Cyber Services">
+  <meta property="og:description" content="Explore PAN, passport, certificates, laptop repair, CCTV and web services in one place.">
   <meta property="og:url" content="https://mahiitservices.in/all-online-services">
   <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/assets/site.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Mahi IT & Cyber Services","url":"https://mahiitservices.in","telephone":"+919773383276","areaServed":"India","serviceType":["Cyber Cafe Services","Government Online Services","IT Services","Laptop Repair","Web Development"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mahi IT and Cyber Services",
+    "url": "https://mahiitservices.in",
+    "telephone": "+919773383276",
+    "areaServed": "India",
+    "serviceType": [
+      "Government Online Services",
+      "Cyber Cafe Services",
+      "IT Services",
+      "Laptop Repair",
+      "Web Development"
+    ]
+  }
   </script>
-  <style>body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial; margin:24px; color:#0f172a} a{color:#a39416}</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services can I book from this page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can book government services such as PAN, passport, GST and certificates, plus IT services including laptop repair, CCTV installation, and web development."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I choose the right service if I am not sure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the search bar to find related services, then contact on WhatsApp. We help you identify the right service and share the exact process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do prices vary by service type?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, pricing depends on service complexity, required documents, and correction type. Final charges and timeline are shared before confirmation."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
-  <main>
-    <h1>All Online Services</h1>
-    <p>We provide a wide range of digital and government-related services — PAN card processing, passport assistance, certificate generation, laptop repair, CCTV installation, and web development.</p>
-    <p><a href="/">Back to Home</a> · <a href="https://wa.me/919773383276?text=I%20need%20help%20with%20services" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a></p>
-  </main>
+<body id="top">
+  <div class="site-wrap">
+    <nav class="topbar reveal">
+      <a class="brand" href="/">
+        <img class="brand-logo" src="/assets/images/logo.jpg" alt="Mahi IT Services logo" loading="eager">
+        <span>Mahi IT Services</span>
+      </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/all-online-services">All Services</a>
+        <a href="/online-services-mumbai">Location Pages</a>
+        <a href="#services-faq">FAQ</a>
+      </div>
+      <a class="cta-link" href="https://wa.me/919773383276?text=Hi%20Vikram%2C%20I%20want%20details%20for%20a%20service" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </nav>
+
+    <main>
+      <section class="hero hero-single reveal delay-1">
+        <article class="hero-panel">
+          <p class="kicker">All service categories</p>
+          <h1>Everything you can book from Mahi IT Services.</h1>
+          <p class="lead">Search by service name and connect instantly on WhatsApp for documents, charges and timeline.</p>
+          <ul class="hero-tags" aria-label="Service benefits">
+            <li><span aria-hidden="true">&#10003;</span> Curated service categories</li>
+            <li><span aria-hidden="true">&#128640;</span> Quick apply buttons</li>
+            <li><span aria-hidden="true">&#128195;</span> Document guidance included</li>
+          </ul>
+          <div class="action-row">
+            <a class="btn btn-primary" href="https://wa.me/919773383276?text=Hi%20Vikram%2C%20I%20need%20help%20with%20services" target="_blank" rel="noopener noreferrer">Talk to Expert</a>
+            <a class="btn btn-ghost" href="/">Back to Home</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="section reveal delay-2">
+        <div class="section-head">
+          <h2>Service Directory</h2>
+          <p>Type a keyword, compare options, and apply instantly.</p>
+        </div>
+        <div class="search-wrap">
+          <input id="allServiceSearch" type="search" placeholder="Search PAN, passport, laptop, CCTV, website..." aria-label="Search all services">
+        </div>
+        <div id="allServiceGrid" class="card-grid service-grid"></div>
+      </section>
+
+      <section class="section reveal delay-3">
+        <div class="contact-panel">
+          <h2>Need service in a specific area?</h2>
+          <p class="lead">Use our location pages for city-specific support and quick contact.</p>
+          <div class="locations">
+            <a class="location-link" href="/online-services-ghatkopar">Ghatkopar <span>View</span></a>
+            <a class="location-link" href="/online-services-mulund">Mulund <span>View</span></a>
+            <a class="location-link" href="/online-services-thane">Thane <span>View</span></a>
+            <a class="location-link" href="/online-services-kalyan">Kalyan <span>View</span></a>
+            <a class="location-link" href="/online-services-kurla">Kurla <span>View</span></a>
+            <a class="location-link" href="/online-services-powai">Powai <span>View</span></a>
+            <a class="location-link" href="/online-services-bhandup">Bhandup <span>View</span></a>
+            <a class="location-link" href="/online-services-dombivli">Dombivli <span>View</span></a>
+            <a class="location-link" href="/online-services-navi-mumbai">Navi Mumbai <span>View</span></a>
+            <a class="location-link" href="/online-services-mumbai">Mumbai <span>View</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal delay-3" id="services-faq">
+        <div class="section-head">
+          <h2>Service FAQs</h2>
+          <p>Helpful answers before you inquire.</p>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>What services can I book here?</h3>
+            <p>You can book PAN, passport, GST, certificate support, laptop and PC repair, CCTV setup, and website services.</p>
+          </article>
+          <article class="faq-item">
+            <h3>How do I choose the right service?</h3>
+            <p>Search by keyword, then message us on WhatsApp. We guide you to the correct process based on your requirement.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Do prices vary by request?</h3>
+            <p>Yes. Prices depend on the specific service and case type. We confirm exact charges and timeline before starting.</p>
+          </article>
+        </div>
+</section>
+    </main>
+
+    <footer class="site-footer reveal delay-3">
+      <h3>Mahi IT Services</h3>
+      <p>Government forms, cyber services and IT support under one trusted team.</p>
+      <div class="socials">
+        <a href="https://wa.me/919773383276?text=Hi%20Vikram%2C%20I%20need%20help%20with%20services" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.instagram.com/mahiitservices.in" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/people/Mahi-It-Services/61587273826035/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.linkedin.com/company/mahi-it-services" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const categoryTone = {
+      Government: "tone-gov",
+      Cyber: "tone-cyber",
+      IT: "tone-it"
+    };
+
+    const allServices = [
+      { category: "Government", name: "New PAN Card", details: "Application and document verification", price: "INR 250", icon: "&#128179;" },
+      { category: "Government", name: "PAN Card Correction", details: "Correction for name, DOB and address", price: "INR 350", icon: "&#9998;" },
+      { category: "Government", name: "Passport Assistance", details: "Fresh and renewal application support", price: "From INR 1600", icon: "&#128706;" },
+      { category: "Government", name: "GST Registration", details: "New GST setup and onboarding", price: "From INR 800", icon: "&#128209;" },
+      { category: "Government", name: "Shop Act and Gumasta", details: "Shop and establishment registration", price: "From INR 800", icon: "&#127970;" },
+      { category: "Government", name: "Income Certificate", details: "Income proof guidance and filing", price: "INR 250", icon: "&#128176;" },
+      { category: "Government", name: "Ration Card Services", details: "New, update and correction support", price: "From INR 300", icon: "&#127968;" },
+      { category: "Cyber", name: "Digital Signature DSC", details: "DSC token and validation workflow", price: "From INR 1000", icon: "&#128274;" },
+      { category: "Cyber", name: "Police Clearance PCC", details: "PCC filing support and process guidance", price: "INR 300", icon: "&#128737;" },
+      { category: "Cyber", name: "PF and UAN Withdrawal", details: "EPFO and UAN claim assistance", price: "From INR 500", icon: "&#128221;" },
+      { category: "IT", name: "Laptop and PC Repair", details: "Hardware fixes and software troubleshooting", price: "Visit from INR 500", icon: "&#128187;" },
+      { category: "IT", name: "Windows and Office Setup", details: "OS installation and driver setup", price: "From INR 500", icon: "&#128421;" },
+      { category: "IT", name: "SSD and RAM Upgrade", details: "Laptop speed and performance upgrade", price: "Part cost plus service", icon: "&#128451;" },
+      { category: "IT", name: "CCTV Installation", details: "Home and office camera setup", price: "On visit", icon: "&#128249;" },
+      { category: "IT", name: "Web Development", details: "Business website and local SEO setup", price: "From INR 5000", icon: "&#127760;" }
+    ];
+
+    function getServiceIconType(item) {
+      const name = item.name.toLowerCase();
+      if (name.includes("pan") && name.includes("correction")) return "edit";
+      if (name.includes("pan")) return "id";
+      if (name.includes("passport")) return "passport";
+      if (name.includes("gst")) return "doc";
+      if (name.includes("income") || name.includes("certificate")) return "certificate";
+      if (name.includes("ration")) return "home";
+      if (name.includes("digital signature")) return "key";
+      if (name.includes("police")) return "shield";
+      if (name.includes("pf") || name.includes("uan")) return "bank";
+      if (name.includes("laptop") || name.includes("pc")) return "laptop";
+      if (name.includes("windows") || name.includes("office")) return "monitor";
+      if (name.includes("ssd") || name.includes("ram")) return "chip";
+      if (name.includes("cctv")) return "camera";
+      if (name.includes("web")) return "globe";
+      return item.category === "Cyber" ? "shield" : item.category === "IT" ? "monitor" : "id";
+    }
+
+    function drawServices(value) {
+      const term = (value || "").toLowerCase().trim();
+      const matches = allServices.filter((item) => {
+        return item.name.toLowerCase().includes(term) || item.category.toLowerCase().includes(term) || item.details.toLowerCase().includes(term);
+      });
+
+      const grid = document.getElementById("allServiceGrid");
+      if (!matches.length) {
+        grid.innerHTML = "<article class=\"card\"><h3>No service matched</h3><p>Try another keyword or message us directly.</p></article>";
+        return;
+      }
+
+      grid.innerHTML = matches.map((item) => {
+        const text = encodeURIComponent("Hi Vikram, I am interested in " + item.name);
+        const tone = categoryTone[item.category] || "tone-it";
+        const iconType = getServiceIconType(item);
+        return `
+          <article class="card service-card ${tone}">
+            <div class="service-card-link">
+              <span class="service-badge service-badge-${iconType}" aria-hidden="true"></span>
+              <span class="service-category">${item.category}</span>
+              <h3>${item.name}</h3>
+              <span class="service-price">${item.price}</span>
+              <a class="service-apply-btn" href="https://wa.me/919773383276?text=${text}" target="_blank" rel="noopener noreferrer">Apply</a>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    document.getElementById("allServiceSearch").addEventListener("input", function (event) {
+      drawServices(event.target.value);
+    });
+
+    drawServices("");
+  </script>
+  <a class="back-to-top-float" href="#top" aria-label="Back to Top" title="Back to Top">&uarr;</a>
+
+  <div class="mobile-cta" aria-label="Quick contact actions">
+    <div class="mobile-cta-inner">
+      <a class="mobile-cta-link mobile-cta-call" href="tel:+919773383276">Call Now</a>
+      <a class="mobile-cta-link mobile-cta-wa" href="https://wa.me/919773383276?text=Hi%20Vikram%2C%20I%20need%20help%20with%20services" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </div>
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>

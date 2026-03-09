@@ -1,0 +1,27 @@
+<svg width="640" height="380" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="govBg" x1="40" y1="10" x2="620" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4FFF2"/>
+      <stop offset="1" stop-color="#C9E8FF"/>
+    </linearGradient>
+    <linearGradient id="govCard" x1="120" y1="70" x2="420" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9F7F2"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="620" height="360" rx="34" fill="url(#govBg)"/>
+  <circle cx="564" cy="88" r="56" fill="#D3F2E2"/>
+  <circle cx="536" cy="116" r="24" fill="#A8E6CA"/>
+  <rect x="112" y="68" width="330" height="236" rx="24" fill="url(#govCard)" stroke="#B8D8CA" stroke-width="4"/>
+  <rect x="146" y="112" width="186" height="18" rx="9" fill="#116A66" fill-opacity="0.25"/>
+  <rect x="146" y="146" width="248" height="14" rx="7" fill="#5B6F86" fill-opacity="0.22"/>
+  <rect x="146" y="172" width="224" height="14" rx="7" fill="#5B6F86" fill-opacity="0.18"/>
+  <rect x="146" y="198" width="266" height="14" rx="7" fill="#5B6F86" fill-opacity="0.16"/>
+  <rect x="146" y="232" width="142" height="34" rx="12" fill="#0F766E"/>
+  <path d="M184 246H250" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <rect x="452" y="124" width="94" height="124" rx="18" fill="#FFFFFF" stroke="#B8D8CA" stroke-width="4"/>
+  <path d="M480 154H518" stroke="#0F766E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M480 176H518" stroke="#0F766E" stroke-width="4" stroke-linecap="round"/>
+  <path d="M480 198H504" stroke="#0F766E" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="500" cy="228" r="10" fill="#0F766E" fill-opacity="0.26"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="640" height="380" viewBox="0 0 640 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cyberBg" x1="36" y1="22" x2="626" y2="358" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8FFF8"/>
+      <stop offset="1" stop-color="#DDE8FF"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="210" y1="70" x2="390" y2="302" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#12325D"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="620" height="360" rx="34" fill="url(#cyberBg)"/>
+  <circle cx="548" cy="88" r="52" fill="#D4E3FF"/>
+  <circle cx="520" cy="116" r="24" fill="#AEC6FF"/>
+  <path d="M320 70L424 114V190C424 248 381 300 320 322C259 300 216 248 216 190V114L320 70Z" fill="url(#shieldGrad)"/>
+  <path d="M320 116C349 116 372 139 372 168V190H388V234H252V190H268V168C268 139 291 116 320 116Z" fill="#DFFAF2" fill-opacity="0.95"/>
+  <rect x="302" y="192" width="36" height="24" rx="10" fill="#0F766E" fill-opacity="0.6"/>
+  <circle cx="320" cy="146" r="16" fill="#DFFAF2"/>
+  <path d="M134 130H210" stroke="#5B6F86" stroke-width="8" stroke-linecap="round" opacity="0.22"/>
+  <path d="M120 164H198" stroke="#5B6F86" stroke-width="8" stroke-linecap="round" opacity="0.22"/>
+  <path d="M440 236H520" stroke="#5B6F86" stroke-width="8" stroke-linecap="round" opacity="0.2"/>
+  <path d="M428 268H504" stroke="#5B6F86" stroke-width="8" stroke-linecap="round" opacity="0.2"/>
+</svg>
