@@ -885,6 +885,77 @@ body.cyber-home .cy-section-head p {
   font-size: 0.8rem;
 }
 
+.instagram-feed-shell {
+  border-radius: 18px;
+  border: 1px solid var(--cy-line);
+  background: linear-gradient(150deg, rgba(16, 20, 28, 0.78), rgba(10, 13, 18, 0.86));
+  box-shadow: var(--cy-shadow);
+  padding: 0.9rem;
+  overflow: hidden;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(326px, 1fr));
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.instagram-card {
+  border-radius: 16px;
+  border: 1px solid rgba(0, 229, 255, 0.24);
+  background: rgba(6, 10, 16, 0.84);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.instagram-card .instagram-media {
+  margin: 0 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 540px !important;
+  border: 0 !important;
+}
+
+.instagram-fallback-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  margin: 0.25rem auto 0;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 229, 255, 0.34);
+  background: rgba(0, 229, 255, 0.08);
+  color: var(--cy-text);
+  font-weight: 700;
+  text-align: center;
+}
+
+.instagram-fallback-link:hover {
+  color: var(--cy-text);
+  border-color: rgba(0, 255, 136, 0.38);
+  background: rgba(0, 255, 136, 0.12);
+}
+
+.instagram-empty {
+  margin: 0;
+  padding: 0.95rem;
+  border-radius: 12px;
+  border: 1px dashed rgba(0, 229, 255, 0.32);
+  background: rgba(0, 229, 255, 0.08);
+  color: var(--cy-soft);
+  font-size: 0.92rem;
+}
+
+.instagram-actions {
+  margin-top: 0.85rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .card-tag {
   margin-top: 0.72rem;
   display: inline-flex;
@@ -1066,6 +1137,7 @@ body.cyber-home .faq-item p {
 body.cyber-home #services,
 body.cyber-home #locations,
 body.cyber-home #testimonials,
+body.cyber-home #instagram-posts,
 body.cyber-home #contact,
 body.cyber-home #home-faq {
   scroll-margin-top: 7rem;
@@ -1452,6 +1524,27 @@ html.js-cyber-motion body.cyber-subpage .reveal.is-visible {
 
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+
+  .instagram-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .instagram-feed-shell {
+    padding: 0.28rem;
+  }
+
+  .instagram-card {
+    padding: 0.18rem;
+  }
+
+  .instagram-card .instagram-media {
+    max-width: 100% !important;
+  }
+
+  .instagram-actions {
+    justify-content: center;
   }
 
   .testimonial-card {
