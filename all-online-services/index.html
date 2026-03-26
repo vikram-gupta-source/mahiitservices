@@ -219,7 +219,8 @@
       { category: "IT", name: "Windows and Office Setup", details: "OS installation and driver setup", price: "From INR 500", icon: "&#128421;" },
       { category: "IT", name: "SSD and RAM Upgrade", details: "Laptop speed and performance upgrade", price: "Part cost plus service", icon: "&#128451;" },
       { category: "IT", name: "CCTV Installation", details: "Home and office camera setup", price: "On visit", icon: "&#128249;" },
-      { category: "IT", name: "Web Development", details: "Business website and local SEO setup", price: "From INR 5000", icon: "&#127760;" }
+      { category: "IT", name: "Web Development", details: "Business website and local SEO setup", price: "From INR 5000", icon: "&#127760;" },
+      { category: "IT", name: "Data Base Services", details: "Database setup, support and management services", price: "Visit Website", icon: "&#128190;", link: "https://db-services.mahiitservices.in/" }
     ];
 
     function getServiceIconType(item) {
@@ -255,6 +256,8 @@
 
       grid.innerHTML = matches.map((item) => {
         const text = encodeURIComponent("Hi Vikram, I am interested in " + item.name);
+        const actionLink = item.link || ("https://wa.me/919773383276?text=" + text);
+        const actionLabel = item.link ? "Visit" : "Apply";
         const tone = categoryTone[item.category] || "tone-it";
         const iconType = getServiceIconType(item);
         return `
@@ -264,7 +267,7 @@
               <span class="service-category">${item.category}</span>
               <h3>${item.name}</h3>
               <span class="service-price">${item.price}</span>
-              <a class="service-apply-btn" href="https://wa.me/919773383276?text=${text}" target="_blank" rel="noopener noreferrer">Apply</a>
+              <a class="service-apply-btn" href="${actionLink}" target="_blank" rel="noopener noreferrer">${actionLabel}</a>
             </div>
           </article>
         `;
