@@ -14,9 +14,7 @@
 	<meta property="og:description" content="Quick support for PAN, passport, certificates, laptop repair, CCTV and web services in Mumbai and Thane.">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://mahiitservices.in/">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; frame-src 'none'; img-src 'self' data:; style-src 'self'; script-src 'self' 'sha256-ZB/HeM2vjRYFgVdH2AO0roNko9s5vjaNscS0yATVn9w=' 'sha256-fLa//cGJ8YL+R4NXWxhyWT24/MKnkfNPRAvbIKCB9x0='; form-action 'self'">
 	<link rel="stylesheet" href="/assets/site.css">
 	<link rel="stylesheet" href="/assets/cyber-home.css">
 	<script type="application/ld+json">
@@ -25,14 +23,33 @@
 		"@type": "LocalBusiness",
 		"name": "Mahi IT Services",
 		"url": "https://mahiitservices.in",
+		"image": "https://mahiitservices.in/assets/images/logo.jpg",
 		"telephone": "+919773383276",
-		"areaServed": ["Mumbai", "Thane", "Navi Mumbai"],
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Mumbai",
+			"addressRegion": "Maharashtra",
+			"addressCountry": "IN"
+		},
+		"priceRange": "₹250-₹5000",
+		"areaServed": ["Mumbai", "Thane", "Navi Mumbai","Kalyan", "Dombivli", "Bhandup", "Powai", "Kurla", "Ghatkopar", "Mulund", "Vashi"],
 		"serviceType": [
 			"Government Online Services",
 			"Cyber Cafe Services",
 			"Laptop and Desktop Repair",
 			"CCTV Installation",
-			"Web Development"
+			"Web Development",
+			"Digital Signature Services",
+			"GST Registration",
+			"PAN Card Services",
+			"Passport Assistance",
+			"Certificate Applications",
+			"Police Clearance Services",
+			"Shop Act and Gumasta License Support",
+			"Income Certificate Assistance",
+			"Data Base Services",
+			"Windows and Office Setup",
+			"Custom IT Solutions"
 		]
 	}
 	</script>
@@ -68,13 +85,6 @@
 		]
 	}
 	</script>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LQKHWKD1WL"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-LQKHWKD1WL');
-	</script>
 </head>
 <body id="top" class="cyber-home">
 	<div class="cyber-noise" aria-hidden="true"></div>
@@ -82,7 +92,7 @@
 	<div class="site-wrap cyber-wrap">
 		<header class="topbar cyber-topbar">
 			<a class="brand cyber-brand" href="/">
-				<img class="brand-logo cyber-brand-logo" src="/assets/images/logo.jpg" alt="Mahi IT Services logo" loading="eager">
+				<img class="brand-logo cyber-brand-logo" src="/assets/images/logo.jpg" alt="Mahi IT Services logo" loading="eager" decoding="async" fetchpriority="high" width="100" height="100">
 				<span>Mahi IT Services</span>
 			</a>
 			<button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -275,6 +285,7 @@
 		</span>
 	</a>
 
+	<!--
 	<script>
 		const instagramPosts = [
   "https://www.instagram.com/p/DVxvtiHjceL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
@@ -448,6 +459,8 @@
 		renderInstagramPosts(instagramPosts);
 		renderServices("");
 	</script>
+	-->
+	<script src="/assets/home.js" defer></script>
 	<script src="/assets/site.js" defer></script>
 </body>
 </html>
