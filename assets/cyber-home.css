@@ -169,6 +169,15 @@ body.cyber-subpage .card > h2:not(:first-child) {
   margin-top: 1rem;
 }
 
+body.cyber-subpage .subpage-content-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+body.cyber-subpage .subpage-content-grid .card {
+  min-height: 100%;
+}
+
 body.cyber-subpage .hero-tags li,
 body.cyber-subpage .search-wrap input {
   border-color: rgba(0, 229, 255, 0.3);
@@ -1639,6 +1648,10 @@ html.js-cyber-motion body.cyber-subpage .reveal.is-visible {
 
   body.cyber-subpage .card > h2 {
     font-size: 1.12rem;
+  }
+
+  body.cyber-subpage .subpage-content-grid {
+    grid-template-columns: 1fr;
   }
 
   body.cyber-subpage .nav-links a {
