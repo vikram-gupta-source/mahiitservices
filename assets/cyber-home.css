@@ -159,6 +159,16 @@ body.cyber-subpage .location-link {
   box-shadow: var(--cy-shadow);
 }
 
+body.cyber-subpage .card > h2 {
+  margin-bottom: 0.55rem;
+  font-size: clamp(1.1rem, 2.1vw, 1.55rem);
+  line-height: 1.16;
+}
+
+body.cyber-subpage .card > h2:not(:first-child) {
+  margin-top: 1rem;
+}
+
 body.cyber-subpage .hero-tags li,
 body.cyber-subpage .search-wrap input {
   border-color: rgba(0, 229, 255, 0.3);
@@ -1625,6 +1635,10 @@ html.js-cyber-motion body.cyber-subpage .reveal.is-visible {
 
   body.cyber-subpage .subpage-hero h1 {
     font-size: clamp(1.55rem, 7vw, 2.15rem);
+  }
+
+  body.cyber-subpage .card > h2 {
+    font-size: 1.12rem;
   }
 
   body.cyber-subpage .nav-links a {
