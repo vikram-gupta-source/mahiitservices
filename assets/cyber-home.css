@@ -1238,6 +1238,30 @@ body.cyber-home .faq-item p {
   color: var(--cy-soft);
 }
 
+body.cyber-home #locations .card {
+  border-color: rgba(0, 229, 255, 0.24);
+  background: linear-gradient(155deg, rgba(19, 25, 35, 0.9) 0%, rgba(11, 14, 21, 0.95) 100%);
+  box-shadow: var(--cy-shadow);
+}
+
+body.cyber-home #locations .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 36px rgba(0, 0, 0, 0.34);
+}
+
+body.cyber-home #locations .card h3,
+body.cyber-home #locations .card h3 a {
+  color: var(--cy-text);
+}
+
+body.cyber-home #locations .card h3 a:hover {
+  color: #dffcff;
+}
+
+body.cyber-home #locations .card p {
+  color: var(--cy-muted);
+}
+
 body.cyber-home #service-process .faq-grid {
   counter-reset: service-step;
   margin: 0;
