@@ -170,8 +170,9 @@ body.cyber-subpage .card > h2:not(:first-child) {
 }
 
 body.cyber-subpage .subpage-content-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   gap: 1rem;
+  align-items: stretch;
 }
 
 body.cyber-subpage .subpage-content-grid .card {
@@ -1651,7 +1652,7 @@ html.js-cyber-motion body.cyber-subpage .reveal.is-visible {
   }
 
   body.cyber-subpage .subpage-content-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   body.cyber-subpage .nav-links a {
