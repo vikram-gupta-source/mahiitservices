@@ -1188,6 +1188,87 @@ body.cyber-home .faq-item p {
   color: var(--cy-soft);
 }
 
+body.cyber-home #service-process .faq-grid {
+  counter-reset: service-step;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.cyber-home #service-process .faq-item {
+  position: relative;
+  padding-left: 3rem;
+}
+
+body.cyber-home #service-process .faq-item::before {
+  counter-increment: service-step;
+  content: counter(service-step);
+  position: absolute;
+  left: 0.9rem;
+  top: 0.95rem;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #021018;
+  background: linear-gradient(135deg, var(--cy-blue), var(--cy-mint));
+}
+
+body.cyber-home #service-definitions .faq-grid {
+  margin: 0;
+  padding: 0;
+}
+
+body.cyber-home #service-definitions dd {
+  margin: 0.42rem 0 0;
+  color: var(--cy-soft);
+}
+
+body.cyber-home .cy-table-wrap {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid var(--cy-line);
+  background: linear-gradient(150deg, rgba(16, 20, 28, 0.9), rgba(10, 13, 18, 0.92));
+  box-shadow: var(--cy-shadow);
+}
+
+body.cyber-home .cy-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+body.cyber-home .cy-table th,
+body.cyber-home .cy-table td {
+  padding: 0.85rem 0.95rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+body.cyber-home .cy-table thead th {
+  color: var(--cy-text);
+  font-family: "Sora", "Inter", sans-serif;
+  font-size: 0.92rem;
+  background: rgba(0, 229, 255, 0.1);
+}
+
+body.cyber-home .cy-table tbody td {
+  color: var(--cy-soft);
+}
+
+body.cyber-home .cy-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+body.cyber-home .cyber-footer p {
+  overflow-wrap: anywhere;
+}
+
 body.cyber-home #services,
 body.cyber-home #locations,
 body.cyber-home #testimonials,
@@ -1578,6 +1659,10 @@ html.js-cyber-motion body.cyber-subpage .reveal.is-visible {
 
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+
+  body.cyber-home .cy-table {
+    min-width: 560px;
   }
 
   .instagram-grid {
