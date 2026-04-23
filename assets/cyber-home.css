@@ -123,6 +123,31 @@ body.cyber-subpage .hero {
   padding-top: 2.3rem;
 }
 
+body.cyber-subpage .subpage-hero {
+  margin-top: 1.35rem;
+  padding: 1.25rem 1.3rem;
+  border-radius: 20px;
+  border: 1px solid var(--cy-line);
+  background: linear-gradient(150deg, rgba(16, 20, 28, 0.78), rgba(10, 13, 18, 0.88));
+  box-shadow: var(--cy-shadow);
+}
+
+body.cyber-subpage .subpage-hero .section-head {
+  display: block;
+  margin: 0;
+}
+
+body.cyber-subpage .subpage-hero .section-head p {
+  max-width: 72ch;
+}
+
+body.cyber-subpage .subpage-hero h1 {
+  margin-bottom: 0.55rem;
+  font-size: clamp(1.85rem, 4vw, 2.7rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
 body.cyber-subpage .hero-panel,
 body.cyber-subpage .card,
 body.cyber-subpage .contact-panel,
@@ -164,6 +189,11 @@ body.cyber-subpage .faq-item p,
 body.cyber-subpage .card p,
 body.cyber-subpage .location-link span {
   color: var(--cy-muted);
+}
+
+body.cyber-subpage .subpage-hero .section-head p {
+  color: var(--cy-soft);
+  font-size: 1rem;
 }
 
 body.cyber-subpage .btn-primary {
@@ -1586,6 +1616,15 @@ html.js-cyber-motion body.cyber-subpage .reveal.is-visible {
   body.cyber-subpage .cta-link {
     width: 100%;
     justify-content: center;
+  }
+
+  body.cyber-subpage .subpage-hero {
+    margin-top: 0.95rem;
+    padding: 1rem 1rem 1.05rem;
+  }
+
+  body.cyber-subpage .subpage-hero h1 {
+    font-size: clamp(1.55rem, 7vw, 2.15rem);
   }
 
   body.cyber-subpage .nav-links a {
