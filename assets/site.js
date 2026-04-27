@@ -206,7 +206,9 @@
     }
 
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reducedMotion) {
+    var coarsePointer = window.matchMedia('(pointer: coarse)').matches;
+    var lowPowerDevice = typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency > 0 && navigator.hardwareConcurrency <= 4;
+    if (reducedMotion || coarsePointer || lowPowerDevice) {
       return;
     }
 

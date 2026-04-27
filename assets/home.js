@@ -139,8 +139,15 @@
 
   var serviceSearch = document.getElementById('serviceSearch');
   if (serviceSearch) {
+    var searchDebounceTimer = null;
     serviceSearch.addEventListener('input', function (event) {
-      renderServices(event.target.value);
+      var value = event.target.value;
+      if (searchDebounceTimer) {
+        window.clearTimeout(searchDebounceTimer);
+      }
+      searchDebounceTimer = window.setTimeout(function () {
+        renderServices(value);
+      }, 120);
     });
   }
 
